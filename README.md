@@ -33,7 +33,7 @@ This containerized approach provides the full power of Claude Code CLI while mai
 
 ## Build image
 ```
-docker build -t claude-code-cli:latest . -f Dockerfile
+docker build --no-cache -t claude-code-cli:latest . -f Dockerfile
 ```
 
 ## Run Claude Code CLI in a Docker container
