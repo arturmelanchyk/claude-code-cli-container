@@ -10,6 +10,7 @@ RUN apk add --no-cache \
     build-base \
     docker-cli \
     ripgrep \
+    make \
     && apk del build-base \
     && rm -rf /var/cache/apk/* /tmp/* /var/tmp/* \
       && addgroup -S docker \
