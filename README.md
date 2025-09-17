@@ -62,3 +62,14 @@ docker run -it --rm \
     --name claude-code-cli-$(basename "$PWD") \
     claude-code-cli:latest
 ```
+
+Shell alias:
+```bash
+alias claude='docker run -it --rm \
+    -v claude-code-cli:/home \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v $(pwd):$(pwd) \
+    -w $(pwd) \
+    --name claude-code-cli-$(basename "$PWD") \
+    claude-code-cli:latest'
+```
