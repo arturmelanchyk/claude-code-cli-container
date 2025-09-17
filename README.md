@@ -54,11 +54,11 @@ The `-v /var/run/docker.sock:/var/run/docker.sock` mount provides Claude Code CL
 - Maintain full Docker functionality for development workflows that require container operations
 
 ```bash
-docker run -it --rm \                                                       
+docker run -it --rm \
     -v claude-code-cli:/home \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v $(pwd):$(pwd) \
     -w $(pwd) \
-    --name $(basename "$PWD") \
+    --name claude-code-cli-$(basename "$PWD") \
     claude-code-cli:latest
 ```
