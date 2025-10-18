@@ -9,6 +9,7 @@ RUN apk add --no-cache \
     py3-pip \
     build-base \
     docker-cli \
+    docker-compose \
     ripgrep \
     make \
     && apk del build-base \
